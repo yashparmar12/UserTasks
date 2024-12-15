@@ -42,8 +42,8 @@ const UpdateProfile = () => {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(
-        "http://localhost:8000/api/user/updateProfile",
+      // const response = await fetch("http://localhost:8000/api/user/updateProfile",
+      const response = await fetch("https://usertasks-mj4d.onrender.com/api/user/updateProfile",
         {
           method: "POST",
           body: formData,
@@ -88,7 +88,8 @@ const UpdateProfile = () => {
   const fetchUserData = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://localhost:8000/api/user/userData", {
+      // const response = await fetch("http://localhost:8000/api/user/userData", {
+      const response = await fetch("https://usertasks-mj4d.onrender.com/api/user/userData", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

@@ -8,7 +8,7 @@ import path from "path";
 import db from "./db.js";
 
 const app = express();
-const PORT = 8000;
+const PORT = 4000 || 8000;
 
 
 dotenv.config();
@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.use(
   cors({
     // origin: "https://usertasks-g5ai.onrender.com", // Allow frontend to access backend
-    origin: "https://usertasks-g5ai.onrender.com" || "http://localhost:3000", // Allow frontend to access backend
+    origin: "https://usertasks-mj4d.onrender.com" || "http://localhost:3000", // Allow frontend to access backend
     // origin:"http://localhost:3000", // Allow frontend to access backend
     credentials: true, // Allow cookies to be sent
   })

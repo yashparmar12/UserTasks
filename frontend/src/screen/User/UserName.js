@@ -39,7 +39,8 @@ const UserName = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const response = await fetch("http://localhost:8000/api/user/userData", {
+      // const response = await fetch("http://localhost:8000/api/user/userData", {
+      const response = await fetch("https://usertasks-mj4d.onrender.com/api/user/userData", {
       // const response = await fetch("https://usertasks-g5ai.onrender.com/api/user/userData", {
         method: "GET",
         headers: {
@@ -100,7 +101,8 @@ const UserName = () => {
       // if (window.confirm("Are you sure want to delete") === true) {
 
       const token = localStorage.getItem("token");
-      await fetch("http://localhost:8000/api/user/delete", {
+      // await fetch("http://localhost:8000/api/user/delete", {
+      await fetch("https://usertasks-mj4d.onrender.com/api/user/delete", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -179,8 +181,8 @@ const UserName = () => {
 
   const searchData = async () => {
     try {
-      const response = await fetch(
-        "http://localhost:8000/api/user/searchData",
+      // const response = await fetch("http://localhost:8000/api/user/searchData",
+      const response = await fetch("https://usertasks-mj4d.onrender.com/api/user/searchData",
         {
           method: "POST",
           body: JSON.stringify({ searchInput: searchInput }),
@@ -213,9 +215,11 @@ const UserName = () => {
     try {
       const url =
         formate === "pdf"
-          ? "http://localhost:8000/api/user/pdfDownload"
+          // ? "http://localhost:8000/api/user/pdfDownload"
+          ? "https://usertasks-mj4d.onrender.com/api/user/pdfDownload"
           : formate === "csv"
-            ? "http://localhost:8000/api/user/csvDownload"
+            // ? "http://localhost:8000/api/user/csvDownload"
+            ? "https://usertasks-mj4d.onrender.com/api/user/csvDownload"
             : formate === "zip"
               ? "http://localhost:8000/api/user/zipDownload"
               : "";

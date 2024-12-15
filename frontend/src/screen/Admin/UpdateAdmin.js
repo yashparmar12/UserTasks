@@ -39,8 +39,8 @@ const UpdateAdmin = () => {
         }
 
         try {
-            const response = await fetch(
-                "http://localhost:8000/api/user/updateProfile",
+            // const response = await fetch("http://localhost:8000/api/user/updateProfile",
+            const response = await fetch("https://usertasks-mj4d.onrender.com/api/user/updateProfile",
                 {
                     method: "POST",
                     body: formData,
@@ -78,7 +78,8 @@ const UpdateAdmin = () => {
 
     const fetchUserData = async () => {
         try {
-            const response = await fetch("http://localhost:8000/api/user/userData", {
+            // const response = await fetch("http://localhost:8000/api/user/userData", {
+            const response = await fetch("https://usertasks-mj4d.onrender.com/api/user/userData", {
                 method: "GET",
                 credentials: "include",
             });

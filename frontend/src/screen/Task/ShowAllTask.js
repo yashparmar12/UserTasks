@@ -7,7 +7,8 @@ const ShowAllTask = () => {
 
   const GetTasks = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/user/showTask", {
+      // const response = await fetch("http://localhost:8000/api/user/showTask", {
+      const response = await fetch("https://usertasks-mj4d.onrender.com/api/user/showTask", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
